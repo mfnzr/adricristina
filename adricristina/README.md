@@ -27,3 +27,6 @@ npm run dev
 ```sh
 npm run build
 ```
+npm install --save font-awesome
+---
+npm install --save font-awesome
