@@ -4,6 +4,9 @@
       <nav>
         <Navbar />
         <HomeView />
+        <AboutView />
+        <ExtensaoCiliosView />
+        <BrasileiroView />
       </nav>
     </div>
   </header>
@@ -12,7 +15,11 @@
 
 <script setup>
 import Navbar from './components/Navbar.vue'
+import AboutView from './views/AboutView.vue';
+import BrasileiroView from './views/BrasileiroView.vue';
+import ExtensaoCiliosView from './views/ExtensaoCiliosView.vue';
 import HomeView from './views/HomeView.vue'
 </script>
 
-<style scoped></style>
+<style>
+</style>

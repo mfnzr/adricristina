@@ -41,7 +41,6 @@ const images = [
 ];
 
 const config = {
-  height: 500,
   width: '100%',
   itemsToShow: 1,
   gap: 5,
@@ -58,13 +57,14 @@ const config = {
   align-items: center;
   height: 90vh;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: -600px;
 }
 
 .carousel {
   position: relative;
   width: 100%;
-  height: 100%; /* Ajuste a altura do carrossel para 100% da altura disponível */
+  height: 100%;
 }
 
 .slide-content {
@@ -73,15 +73,14 @@ const config = {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 100%;
   font-family: "Poppins", serif;
 }
 
 .text-overlay {
   text-align: center;
-  position: absolute; /* Coloca o texto sobre a imagem */
-  top: 96px; /* Ajuste a posição do texto acima da imagem */
-  width: 65%; /* Garante que o texto ocupe toda a largura do slide */
+  position: absolute;
+  top: 96px;
+  width: 65%;
 }
 
 .slide-title {
