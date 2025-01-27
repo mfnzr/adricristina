@@ -20,7 +20,7 @@
             </p>
             <br>
             <br>
-            <p class="text">Saiba mais sobre os demais modelos de extensão de cílios clicando <a href="#"> aqui.</a></p>
+            <p class="text">Saiba mais sobre os demais modelos de extensão de cílios clicando&nbsp;<a href="#"> aqui</a>.</p>
         </div>
 
         <div class="line"></div>

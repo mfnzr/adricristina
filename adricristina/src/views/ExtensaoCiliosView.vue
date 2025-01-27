@@ -11,7 +11,7 @@
           <p class="text"> A autoestima é uma faceta vital da identidade de uma mulher. Quando se sentem bem consigo mesmas, as mulheres irradiam confiança em todas as áreas de suas vidas. O alongamento de cílios não é apenas sobre aprimorar a aparência exterior; é sobre nutrir um senso de autoaceitação e amor-próprio. Ao olhar no espelho e ver um olhar radiante e sedutor, uma mulher não apenas se sente bonita, mas também fortalecida e pronta para conquistar o mundo.</p>
         </div>
     </div>
-    <div class="text">
+    <div>
         <p class="text">   Entretanto, a execução correta do alongamento de cílios é crucial para garantir resultados deslumbrantes e seguros. É aqui que entra a importância de ser feito por uma profissional especializada. Uma técnica precisa, habilidosa e segura é essencial para evitar danos aos cílios naturais e garantir um resultado que atenda às expectativas da cliente.
 Além disso, a segurança é uma prioridade. Uma profissional qualificada utiliza produtos de alta qualidade e segue protocolos de higiene rigorosos para proteger a saúde e a integridade dos cílios naturais. Isso proporciona às clientes a tranquilidade de saber que estão em boas mãos e que seu bem-estar é uma prioridade.
 Portanto, o alongamento de cílios quando realizado por uma profissional especializada, não é apenas um serviço de beleza, mas uma jornada de transformação que eleva a autoestima e celebra a beleza individual de cada mulher.</p>
@@ -48,7 +48,6 @@ Portanto, o alongamento de cílios quando realizado por uma profissional especia
     font-size: 20px;
     text-align: justify;
     text-indent: 40px;
-    margin-left: 40px;
     font-weight: 300;
     font-family: "Poppins", serif;
     margin: 0 96px 0 96px;
