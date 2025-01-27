@@ -27,3 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
+npm i vue3-carousel
+---
+npm install --save font-awesome
+---
