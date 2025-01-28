@@ -3,13 +3,15 @@
     <div class="wrapper">
       <nav>
         <Navbar />
+      </nav>
+      <main>
         <HomeView />
         <AboutView />
         <ExtensaoCiliosView />
         <BrasileiroView />
         <MassagemCorporalView />
         <ContatoView />
-      </nav>
+      </main>
     </div>
   </header>
 
