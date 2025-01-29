@@ -15,6 +15,7 @@
         <MassagemCorporalView />
         <Line />
         <ContatoView />
+        <ComentariosView />
       </main>
     </div>
   </header>
@@ -26,6 +27,7 @@ import Line from './components/Line.vue';
 import Navbar from './components/Navbar.vue'
 import AboutView from './views/AboutView.vue';
 import BrasileiroView from './views/BrasileiroView.vue';
+import ComentariosView from './views/ComentariosView.vue';
 import ContatoView from './views/ContatoView.vue';
 import ExtensaoCiliosView from './views/ExtensaoCiliosView.vue';
 import HomeView from './views/HomeView.vue'
