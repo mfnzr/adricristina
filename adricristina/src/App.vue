@@ -7,9 +7,13 @@
       <main>
         <HomeView />
         <AboutView />
+        <Line />
         <ExtensaoCiliosView />
+        <Line />
         <BrasileiroView />
+        <Line />
         <MassagemCorporalView />
+        <Line />
         <ContatoView />
       </main>
     </div>
@@ -18,6 +22,7 @@
 </template>
 
 <script setup>
+import Line from './components/Line.vue';
 import Navbar from './components/Navbar.vue'
 import AboutView from './views/AboutView.vue';
 import BrasileiroView from './views/BrasileiroView.vue';

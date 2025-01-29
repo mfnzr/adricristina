@@ -19,7 +19,6 @@
         <img src="../assets/adri.png" alt="Foto de Adriana Cristina" />
       </div>
     </div>
-    <div class="line"></div>
   </div>
 </template>
 
@@ -35,7 +34,7 @@ export default {
   align-items: center;
   justify-content: center;
   font-family: "Poppins", serif;
-  margin: 0 96px 0 96px;
+  margin: 70px 96px 0 96px;
 }
 
 
@@ -55,14 +54,6 @@ p {
   margin-right: 40px;
   font-weight: 300;
   color: #292626;
-}
-
-.line {
-  width: 50%;
-  height: 1px;
-  border-top: 1px dotted #279DA9;
-  align-items: center;
-  margin: -200px auto 0 auto;
 }
 
 @media (min-width: 1024px) {

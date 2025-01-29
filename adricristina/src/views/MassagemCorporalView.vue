@@ -31,17 +31,10 @@
       </ul>
     </div>
     <div>
-    <p class="more">Saiba mais sobre os demais tipos de massagem corporal clicando&nbsp;<a href="#">aqui</a>.</p>
-  </div>
-    <div class="line"></div>
+      <p class="more">Saiba mais sobre os demais tipos de massagem corporal clicando&nbsp;<a href="#">aqui</a>.</p>
+    </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'AboutView',
-};
-</script>
 
 <style scoped>
 .container {
@@ -105,14 +98,6 @@ li::before {
 a {
   color: #279DA9;
   font-size: 20px;
-}
-
-.line {
-  width: 50%;
-  height: 1px;
-  border-top: 1px dotted #279DA9;
-  align-items: center;
-  margin: 200px auto;
 }
 
 

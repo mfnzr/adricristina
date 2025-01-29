@@ -20,10 +20,9 @@
             </p>
             <br>
             <br>
-            <p class="text">Saiba mais sobre os demais modelos de extensão de cílios clicando&nbsp;<a href="#"> aqui</a>.</p>
+            <p class="text">Saiba mais sobre os demais modelos de extensão de cílios clicando&nbsp;<a href="#">
+                    aqui</a>.</p>
         </div>
-
-        <div class="line"></div>
     </div>
 </template>
 
@@ -77,15 +76,6 @@ a {
 .image {
     margin-bottom: 45px;
 }
-
-.line {
-    width: 50%;
-    height: 1px;
-    border-top: 1px dotted #279DA9;
-    align-items: center;
-    margin: 200px auto;
-}
-
 
 @media (min-width: 1024px) {
     .about {
