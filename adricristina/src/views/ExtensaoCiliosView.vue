@@ -43,7 +43,7 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 200px 0 0 96px;
-  flex-direction: row; /* Lado a lado para telas grandes */
+  flex-direction: row; 
 }
 
 h1 {
@@ -71,36 +71,36 @@ h1 {
 
 @media (max-width: 1024px) {
   .container {
-    flex-direction: column; /* Em telas menores, a imagem e o texto ficam empilhados */
-    margin: 50px 20px; /* Ajuste da margem para dispositivos móveis */
+    flex-direction: column; 
+    margin: 50px 20px; 
   }
 
   .image img {
-    width: 100%; /* A imagem ocupa 100% da largura da tela */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover; /* A imagem é ajustada sem distorções */
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
   }
 
   h1 {
-    font-size: 24px; /* Ajusta o tamanho do título em telas menores */
-    text-indent: 0; /* Remove o recuo no título em telas pequenas */
-    text-align: center; /* Centraliza o título em telas pequenas */
+    font-size: 24px; 
+    text-indent: 0; 
+    text-align: center; 
   }
 
   .text {
-    font-size: 18px; /* Ajusta o tamanho do texto para telas menores */
-    margin: 0 20px; /* Ajuste nas margens laterais */
-    text-indent: 0; /* Remove o recuo do parágrafo */
+    font-size: 18px; 
+    margin: 0 20px; 
+    text-indent: 0; 
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 20px; /* Reduz o tamanho do título em telas muito pequenas */
+    font-size: 20px; 
   }
 
   .text {
-    font-size: 16px; /* Reduz o tamanho do texto ainda mais */
+    font-size: 16px;
   }
 }
 

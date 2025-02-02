@@ -69,7 +69,7 @@ p {
     font-weight: 200;
 }
 
-/* Estilos para telas menores */
+
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
@@ -77,18 +77,18 @@ p {
     }
 
     .contact {
-        width: calc(100% - 40px); /* Garante o espaçamento nas laterais */
+        width: calc(100% - 40px); 
         padding: 40px;
     }
 
     h1 {
-        font-size: 24px; /* Ajusta o tamanho do título */
-        text-align: center; /* Centraliza o título */
+        font-size: 24px; 
+        text-align: center;
     }
 
     p {
-        font-size: 18px; /* Ajusta o tamanho do texto */
-        text-align: center; /* Centraliza o texto */
+        font-size: 18px; 
+        text-align: center; 
     }
     
     body {
@@ -101,16 +101,16 @@ p {
         width: 100%;
     }
     .icon {
-        width: 25px; /* Diminui o tamanho do ícone */
-        height: 25px; /* Diminui o tamanho do ícone */
+        width: 25px; 
+        height: 25px;
     }
 
     h1 {
-        font-size: 20px; /* Reduz o tamanho do título em telas muito pequenas */
+        font-size: 20px; 
     }
 
     p {
-        font-size: 16px; /* Reduz o tamanho do texto em telas muito pequenas */
+        font-size: 16px; 
     }
 }
 

@@ -33,7 +33,7 @@ export default {
   justify-content: center;
   font-family: "Poppins", serif;
   margin: 70px 96px 0 96px;
-  flex-direction: row; /* Para telas grandes, a imagem e o texto ficam lado a lado */
+  flex-direction: row; 
 }
 
 h1 {
@@ -53,16 +53,16 @@ p {
   color: #292626;
 }
 
-/* Responsividade para telas pequenas */
+
 @media (max-width: 768px) {
   .about {
-    flex-direction: column; /* Em telas pequenas, o layout muda para coluna */
-    margin: 20px 20px; /* Ajuste da margem para dispositivos móveis */
+    flex-direction: column; 
+    margin: 20px 20px;
   }
 
   .content {
-    text-align: center; /* Para centralizar o texto em telas pequenas */
-    margin-bottom: 20px; /* Espaço entre o texto e a imagem */
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .image {
@@ -71,39 +71,39 @@ p {
   }
 
   .image img {
-    width: 80%; /* Ajusta a largura da imagem para 80% em telas pequenas */
-    max-width: 400px; /* Impede que a imagem ultrapasse um tamanho máximo */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 80%;
+    max-width: 400px; 
+    height: auto;
   }
 
   h1 {
-    font-size: 24px; /* Reduz o tamanho do título em telas pequenas */
+    font-size: 24px;
   }
 
   p {
-    font-size: 18px; /* Reduz o tamanho da fonte do texto em telas pequenas */
-    text-indent: 0; /* Remove o recuo do parágrafo em telas pequenas */
+    font-size: 18px; 
+    text-indent: 0; 
     margin-right: 0;
-    margin-left: 0; /* Remove a margem lateral */
+    margin-left: 0; 
   }
 }
 
-/* Responsividade para telas muito pequenas */
+
 @media (max-width: 480px) {
   .about {
-    margin: 20px 10px; /* Margem ainda mais ajustada */
+    margin: 20px 10px; 
   }
 
   .image img {
-    width: 90%; /* Ajusta a largura da imagem para 90% em telas muito pequenas */
+    width: 90%;
   }
 
   h1 {
-    font-size: 22px; /* Tamanho de fonte ainda menor para telas muito pequenas */
+    font-size: 22px;
   }
 
   p {
-    font-size: 16px; /* Tamanho de fonte ainda menor para telas muito pequenas */
+    font-size: 16px;
   }
 }
 </style>

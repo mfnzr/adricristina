@@ -111,7 +111,7 @@ h1 {
     margin-bottom: 5px;
     font-family: "Poppins", serif;
     font-weight: 400;
-    text-align: center;  /* Adicionei essa linha para centralizar o título */
+    text-align: center;
 }
 
 .content {
@@ -271,9 +271,7 @@ h1 {
     text-align: center;
 }
 
-/* Responsividade para telas menores */
 
-/* Responsividade para telas menores */
 @media (max-width: 1024px) {
     .container {
         margin-top: 100px;
@@ -309,18 +307,18 @@ h1 {
 @media (max-width: 480px) {
     h1 {
         font-size: 24px;
-        text-align: center;  /* Garante que o título fique centralizado em telas pequenas */
-        margin-bottom: 10px; /* Ajuste de margem para ficar mais harmônico */
+        text-align: center; 
+        margin-bottom: 10px; 
     }
 
     .content {
-        margin: 10px 20px; /* Adicionada margem para garantir o espaço nas laterais */
+        margin: 10px 20px; 
         padding: 20px 10px;
     }
 
     .comments {
         padding: 15px;
-        margin: 10px 10px; /* Adicionada margem para garantir o espaço nas laterais */
+        margin: 10px 10px; 
     }
 
     .name {

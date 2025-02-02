@@ -103,7 +103,7 @@ const config = {
 .slide-content img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Isso garante que a imagem ocupe o espaço corretamente */
+  object-fit: cover; 
   border-radius: 20px;
 }
 

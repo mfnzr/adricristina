@@ -74,16 +74,16 @@ a {
 
 .image {
     width: 100%;
-    height: 300px; /* Define a altura da imagem */
-    overflow: hidden; /* Garante que a imagem não ultrapasse os limites da área */
+    height: 300px; 
+    overflow: hidden; 
     margin-bottom: 30px;
     position: relative;
 }
 
 .image img {
     width: 100%;
-    height: 100%; /* A imagem ocupa 100% da altura definida */
-    object-fit: cover; /* A imagem será cortada para cobrir o espaço sem distorcer */
+    height: 100%;
+    object-fit: cover;
 }
 
 @media (min-width: 1024px) {
@@ -110,7 +110,7 @@ a {
     }
 
     .image {
-        height: 400px; /* Ajuste da altura para telas maiores */
+        height: 400px;
     }
 }
 
@@ -123,7 +123,7 @@ a {
 
     .image {
         margin-bottom: 20px;
-        height: 250px; /* Ajuste da altura para telas menores */
+        height: 250px;
     }
 
     h1 {
@@ -161,7 +161,7 @@ a {
     }
 
     .image {
-        height: 200px; /* Ajuste da altura para telas muito pequenas */
+        height: 200px;
     }
 }
 </style>
