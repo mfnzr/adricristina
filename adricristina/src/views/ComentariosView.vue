@@ -2,16 +2,19 @@
     <div class="container">
         <h1>Comentários</h1>
         <div class="content">
-            <div v-for="comment in paginatedComments" :key="comment.id" class="comments">
-                <h3 class="name">{{ comment.name }}</h3>
-                <p class="comment">{{ comment.text }}</p>
-                <p class="date">{{ comment.date }}</p>
+            <div v-if="paginatedComments.length === 0" class="no-comments">Ainda não existem comentários.</div>
+            <div v-else>
+                <div v-for="comment in paginatedComments" :key="comment.id" class="comments">
+                    <h3 class="name">{{ comment.name }}</h3>
+                    <p class="comment">{{ comment.text }}</p>
+                    <p class="date">{{ comment.date }}</p>
+                </div>
+                <div class="pagination">
+                    <button @click="prevPage" :disabled="currentPage === 1">Anterior</button>
+                    <span class="page-number">{{ currentPage }}</span>
+                    <button @click="nextPage" :disabled="currentPage === totalPages">Próximo</button>
+                </div>
             </div>
-            <div class="pagination">
-            <button @click="prevPage" :disabled="currentPage === 1">Anterior</button>
-            <span class="page-number">{{ currentPage }}</span>
-            <button @click="nextPage" :disabled="currentPage === totalPages">Próximo</button>
-        </div>
         </div>
     </div>
 </template>
@@ -22,7 +25,7 @@ export default {
     data() {
         return {
             comments: [
-                {
+            {
                     id: 1,
                     name: "Maria Fernanda",
                     text: "Excelente profissional, super recomendo!",
@@ -67,10 +70,9 @@ export default {
         },
     },
 }
-    </script>
+</script>
 
 <style scoped>
-
 .container {
     display: flex;
     flex-direction: column;
@@ -158,5 +160,13 @@ h1 {
     font-weight: 300;
     color: #292626;
     font-family: "Poppins", serif;
+}
+
+.no-comments {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(0, 0, 0, 50%);
+    padding: 20px;
 }
 </style>
