@@ -11,8 +11,12 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/adricristina/(.*)",
         "dest": "/adricristina/index.html"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/adricristina/$1"
       }
     ]
   }
