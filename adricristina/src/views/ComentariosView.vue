@@ -1,18 +1,35 @@
 <template>
-    <div class="container">
-        <h1>Comentários</h1>
-        <div class="content">
-            <div v-if="paginatedComments.length === 0" class="no-comments">Ainda não existem comentários.</div>
-            <div v-else>
-                <div v-for="comment in paginatedComments" :key="comment.id" class="comments">
-                    <h3 class="name">{{ comment.name }}</h3>
-                    <p class="comment">{{ comment.text }}</p>
-                    <p class="date">{{ comment.date }}</p>
+    <div>
+        <div class="container">
+            <h1>Comentários</h1>
+            <div class="content">
+                <div v-if="paginatedComments.length === 0" class="no-comments">Ainda não existem comentários.</div>
+                <div v-else>
+                    <div v-for="comment in paginatedComments" :key="comment.id" class="comments">
+                        <div class="comment-header">
+                            <h3 class="name">{{ comment.name }}</h3>
+                        </div>
+                        <p class="comment">{{ comment.text }}</p>
+                        <p class="date">{{ comment.date }}</p>
+                    </div>
+                    <div class="pagination">
+                        <button @click="prevPage" :disabled="currentPage === 1">Anterior</button>
+                        <span class="page-number">{{ currentPage }}</span>
+                        <button @click="nextPage" :disabled="currentPage === totalPages">Próximo</button>
+                    </div>
                 </div>
-                <div class="pagination">
-                    <button @click="prevPage" :disabled="currentPage === 1">Anterior</button>
-                    <span class="page-number">{{ currentPage }}</span>
-                    <button @click="nextPage" :disabled="currentPage === totalPages">Próximo</button>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Deixe seu comentário</h1>
+            <div class="content">
+                <div class="info">
+                    <input type="text" placeholder="Nome" class="add-name" v-model="name" />
+                    <input type="text" placeholder="E-mail" class="add-email" v-model="email" />
+                </div>
+                <div class="info">
+                    <textarea v-model="text" placeholder="Digite seu comentário" class="add-comment"></textarea>
+                    <button @click="sendComment">Enviar comentário</button>
                 </div>
             </div>
         </div>
@@ -25,7 +42,7 @@ export default {
     data() {
         return {
             comments: [
-            {
+                {
                     id: 1,
                     name: "Maria Fernanda",
                     text: "Excelente profissional, super recomendo!",
@@ -45,7 +62,10 @@ export default {
                 },
             ],
             currentPage: 1,
-            itemsPerPage: 2,
+            itemsPerPage: 3,
+            name: '',
+            email: '',
+            text: '',
         };
     },
     computed: {
@@ -68,6 +88,23 @@ export default {
                 this.currentPage--;
             }
         },
+        sendComment() {
+            if (!this.name || !this.email || !this.text) {
+                alert("Preencha todos os campos!");
+            } else {
+                const newComment = {
+                    id: this.comments.length + 1,
+                    name: this.name,
+                    email: this.email,
+                    text: this.text,
+                    date: new Date().toLocaleDateString("pt-BR")
+                };
+                this.comments.push(newComment);
+                this.name = '';
+                this.email = '';    
+                this.text = '';
+            }
+        }
     },
 }
 </script>
@@ -102,31 +139,41 @@ h1 {
 .comments {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
     background-color: #f3f3f3;
     font-family: "Poppins", serif;
     padding: 23px;
     border-radius: 10px;
     margin: 10px;
+    position: relative;
+    min-height: 100px;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .name {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 400;
     color: rgb(0, 0, 0, 25%);
 }
 
 .comment {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
+    margin-top: auto;
     color: rgb(0, 0, 0, 75%);
 }
 
 .date {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 300;
     color: rgb(0, 0, 0, 25%);
+    align-self: flex-end;
+    margin-top: auto;
+    text-align: right;
 }
 
 .pagination {
@@ -168,5 +215,62 @@ h1 {
     font-weight: 300;
     color: rgb(0, 0, 0, 50%);
     padding: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.add-name,
+.add-email {
+    flex: 1;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #292626;
+    font-family: "Poppins", serif;
+    background-color: #f3f3f3;
+}
+
+.add-comment {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #292626;
+    font-family: "Poppins", serif;
+    background-color: #f3f3f3;
+    resize: none;
+}
+
+.info button {
+    width: 30%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(39, 157, 169, 0.8);
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    font-family: "Poppins", serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.info button:hover {
+    background-color: rgba(39, 157, 169, 1);
 }
 </style>
