@@ -28,14 +28,14 @@ import { Carousel, Slide, Navigation } from 'vue3-carousel';
 const images = [
   {
     id: 1,
-    url: '/img/slide1.png',
+    url: new URL('@/assets/slide1.png', import.meta.url).href,
     title1: "Cílios volumosos e naturais?",
     title2: " Temos a técnica perfeita para você!",
     subtitle: "Experimente a magia dos cílios volumosos! Com a técnica de volume brasileiro, seus cílios ficarão mais longos, volumosos e curvados."
   },
   {
     id: 2,
-    url: '/img/slide2.png',
+    url: new URL('@/assets/slide2.png', import.meta.url).href,
     title1: "Energia renovada e bem-estar?",
     title2: "Descubra a massagem ideal para você!",
     subtitle: "Conheça a técnica perfeita para você se conectar com o seu corpo e mente. Experimente uma massagem personalizada e sinta a diferença!"
