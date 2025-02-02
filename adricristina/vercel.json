@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "ADRI_CRISTINA/package.json",
+        "src": "adricristina/package.json",
         "use": "@vercel/static-build",
         "config": {
           "distDir": "dist"
