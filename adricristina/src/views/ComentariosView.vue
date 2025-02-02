@@ -108,10 +108,10 @@ export default {
 h1 {
     font-size: 28px;
     color: #292626;
-    text-indent: -500px;
     margin-bottom: 5px;
     font-family: "Poppins", serif;
     font-weight: 400;
+    text-align: center;  /* Adicionei essa linha para centralizar o título */
 }
 
 .content {
@@ -309,7 +309,8 @@ h1 {
 @media (max-width: 480px) {
     h1 {
         font-size: 24px;
-        text-align: center;
+        text-align: center;  /* Garante que o título fique centralizado em telas pequenas */
+        margin-bottom: 10px; /* Ajuste de margem para ficar mais harmônico */
     }
 
     .content {

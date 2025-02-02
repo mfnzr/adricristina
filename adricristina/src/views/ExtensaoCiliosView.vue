@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="extensao-de-cilios">
     <div class="container">
       <div class="image">
         <img src="../assets/cilios1.png" alt="Foto de Adriana Cristina" />

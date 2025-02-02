@@ -18,6 +18,7 @@
         <Line />
         <ContatoView />
         <ComentariosView />
+        <Footer />
       </main>
     </div>
   </header>
@@ -25,6 +26,7 @@
 </template>
 
 <script setup>
+import Footer from './components/Footer.vue';
 import Line from './components/Line.vue';
 import Navbar from './components/Navbar.vue'
 import AboutView from './views/AboutView.vue';
@@ -37,4 +39,5 @@ import MassagemCorporalView from './views/MassagemCorporalView.vue';
 </script>
 
 <style>
+
 </style>

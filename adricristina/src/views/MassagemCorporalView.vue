@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="massagem-corporal">
     <div class="container">
       <div class="image">
         <img src="../assets/massagem.png" alt="Foto de Adriana Cristina" />

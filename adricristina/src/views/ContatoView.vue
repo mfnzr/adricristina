@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div id="contato" class="container">
         <div class="contact">
             <h1>Entre em contato e agende seu horário</h1>
             <div class="content">
@@ -29,23 +29,23 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     color: white;
     font-family: "Poppins", serif;
-    padding: 60px;
-    margin: 0 100px;
-    flex-wrap: wrap; /* Permite a quebra de linha em telas pequenas */
+    padding: 60px 20px;
+    margin: 0 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .contact {
     flex: 1;
-    margin: 0 40px;
     background-color: #279DA9;
     border-radius: 25px;
     padding: 60px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    min-width: 300px; /* Define uma largura mínima para cada bloco */
-    margin-bottom: 20px; /* Espaço entre os blocos em telas pequenas */
+    min-width: 300px;
+    text-align: center;
 }
 
 .content {
@@ -72,14 +72,13 @@ p {
 /* Estilos para telas menores */
 @media (max-width: 1024px) {
     .container {
-        flex-direction: column; /* Empilha as seções em telas menores */
-        padding: 40px 20px; /* Ajusta o padding para telas pequenas */
-        margin: 0 20px; /* Ajusta a margem lateral */
+        flex-direction: column;
+        padding: 40px 20px;
     }
 
     .contact {
-        margin: 20px 0; /* Ajusta o espaço entre as caixas de contato */
-        padding: 40px; /* Ajusta o padding para telas pequenas */
+        width: calc(100% - 40px); /* Garante o espaçamento nas laterais */
+        padding: 40px;
     }
 
     h1 {
@@ -91,10 +90,16 @@ p {
         font-size: 18px; /* Ajusta o tamanho do texto */
         text-align: center; /* Centraliza o texto */
     }
+    
+    body {
+    overflow-x: hidden;
+}
 }
 
-/* Estilos para telas muito pequenas (como celulares em modo retrato) */
 @media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
     .icon {
         width: 25px; /* Diminui o tamanho do ícone */
         height: 25px; /* Diminui o tamanho do ícone */

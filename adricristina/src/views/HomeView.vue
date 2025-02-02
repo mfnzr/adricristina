@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel-container">
+  <div id="home" class="carousel-container">
     <Carousel v-bind="config">
       <Slide v-for="image in images" :key="image.id">
         <div class="slide-content">
