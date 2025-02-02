@@ -43,6 +43,7 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 200px 0 0 96px;
+  flex-direction: row; /* Lado a lado para telas grandes */
 }
 
 h1 {
@@ -52,7 +53,6 @@ h1 {
   margin-bottom: 15px;
   font-family: "Poppins", serif;
   font-weight: 600;
-
 }
 
 .text {
@@ -69,11 +69,39 @@ h1 {
   margin-bottom: 45px;
 }
 
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Em telas menores, a imagem e o texto ficam empilhados */
+    margin: 50px 20px; /* Ajuste da margem para dispositivos móveis */
+  }
+
+  .image img {
+    width: 100%; /* A imagem ocupa 100% da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* A imagem é ajustada sem distorções */
+  }
+
+  h1 {
+    font-size: 24px; /* Ajusta o tamanho do título em telas menores */
+    text-indent: 0; /* Remove o recuo no título em telas pequenas */
+    text-align: center; /* Centraliza o título em telas pequenas */
+  }
+
+  .text {
+    font-size: 18px; /* Ajusta o tamanho do texto para telas menores */
+    margin: 0 20px; /* Ajuste nas margens laterais */
+    text-indent: 0; /* Remove o recuo do parágrafo */
   }
 }
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px; /* Reduz o tamanho do título em telas muito pequenas */
+  }
+
+  .text {
+    font-size: 16px; /* Reduz o tamanho do texto ainda mais */
+  }
+}
+
 </style>

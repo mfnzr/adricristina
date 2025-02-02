@@ -38,7 +38,7 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 200px 0 0 96px;
+    margin: 50px 10px;
 }
 
 h1 {
@@ -46,6 +46,7 @@ h1 {
     color: #279DA9;
     font-family: "Poppins", serif;
     font-weight: 600;
+    text-align: center;
 }
 
 h2 {
@@ -54,18 +55,16 @@ h2 {
     font-family: "Poppins", serif;
     font-weight: 400;
     color: #292626;
+    text-align: center;
 }
 
 .text {
     font-size: 20px;
-    text-align: center;
-    text-indent: 40px;
-    margin-left: 40px;
+    text-align: justify;
     font-weight: 300;
     font-family: "Poppins", serif;
-    margin: 0 96px 0 96px;
     color: #292626;
-
+    margin: 0 16px;
 }
 
 a {
@@ -74,14 +73,95 @@ a {
 }
 
 .image {
-    margin-bottom: 45px;
+    width: 100%;
+    height: 300px; /* Define a altura da imagem */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites da área */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 100%; /* A imagem ocupa 100% da altura definida */
+    object-fit: cover; /* A imagem será cortada para cobrir o espaço sem distorcer */
 }
 
 @media (min-width: 1024px) {
-    .about {
-        min-height: 100vh;
-        display: flex;
+    .container {
+        margin: 150px 96px;
+    }
+
+    .text {
+        font-size: 20px;
+        margin: 0 96px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .container {
+        flex-direction: column;
         align-items: center;
+    }
+
+    .image {
+        height: 400px; /* Ajuste da altura para telas maiores */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 80px 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        margin-bottom: 20px;
+        height: 250px; /* Ajuste da altura para telas menores */
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .text {
+        font-size: 18px;
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 40px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .text {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .image {
+        height: 200px; /* Ajuste da altura para telas muito pequenas */
     }
 }
 </style>

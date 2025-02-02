@@ -4,8 +4,10 @@
       <nav>
         <Navbar />
       </nav>
+      <header>
+      <HomeView />
+    </header>
       <main>
-        <HomeView />
         <AboutView />
         <Line />
         <ExtensaoCiliosView />

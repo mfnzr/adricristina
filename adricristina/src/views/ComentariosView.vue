@@ -180,7 +180,7 @@ h1 {
     cursor: pointer;
     font-size: 16px;
     font-family: "Poppins", serif;
-    color: #fff
+    color: #fff;
 }
 
 .pagination button:disabled {
@@ -270,4 +270,92 @@ h1 {
     margin-top: auto;
     text-align: center;
 }
+
+/* Responsividade para telas menores */
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    .container {
+        margin-top: 100px;
+    }
+
+    .content {
+        margin: 10px 50px;
+        padding: 30px 15px;
+    }
+
+    .comments {
+        margin: 10px 20px;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .info input,
+    .info button,
+    .info textarea {
+        width: 100%;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .content {
+        margin: 10px 20px; /* Adicionada margem para garantir o espaço nas laterais */
+        padding: 20px 10px;
+    }
+
+    .comments {
+        padding: 15px;
+        margin: 10px 10px; /* Adicionada margem para garantir o espaço nas laterais */
+    }
+
+    .name {
+        font-size: 14px;
+    }
+
+    .comment {
+        font-size: 16px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+
+    .pagination button {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .pagination .page-number {
+        font-size: 16px;
+    }
+
+    .add-name,
+    .add-email,
+    .add-comment {
+        font-size: 14px;
+    }
+
+    .info button {
+        font-size: 16px;
+    }
+
+    .sucsess-msg {
+        font-size: 14px;
+    }
+}
+
 </style>

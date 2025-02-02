@@ -3,11 +3,13 @@
     <Carousel v-bind="config">
       <Slide v-for="image in images" :key="image.id">
         <div class="slide-content">
+          <!-- Colocando o texto fora da imagem -->
           <div class="text-overlay">
             <h1 class="slide-title"> {{ image.title1 }}</h1>
             <h1 class="slide-title"> {{ image.title2 }}</h1>
             <p class="slide-subtitle"> {{ image.subtitle }}</p>
           </div>
+          <!-- A imagem abaixo do texto -->
           <img :src="image.url" alt="image" />
         </div>
       </Slide>
@@ -58,7 +60,7 @@ const config = {
   height: 90vh;
   width: 100%;
   margin-top: 50px;
-  margin-bottom: -600px;
+  margin-bottom: -50px;
 }
 
 .carousel {
@@ -74,13 +76,15 @@ const config = {
   align-items: center;
   width: 100%;
   font-family: "Poppins", serif;
+  position: relative;
+  object-fit: cover;
 }
 
 .text-overlay {
   text-align: center;
-  position: absolute;
-  top: 96px;
-  width: 65%;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .slide-title {
@@ -93,12 +97,55 @@ const config = {
 .slide-subtitle {
   font-size: 20px;
   color: #292626;
+  margin-top: 10px;
 }
 
 .slide-content img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  object-fit: cover; /* Isso garante que a imagem ocupe o espaço corretamente */
   border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+  .text-overlay {
+    padding-top: 30px;
+  }
+
+  .slide-title {
+    font-size: 28px;
+  }
+
+  .slide-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-overlay {
+    padding-top: 40px;
+  }
+
+  .slide-title {
+    font-size: 24px;
+  }
+
+  .slide-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay {
+    padding-top: 50px;
+  }
+
+  .slide-title {
+    font-size: 22px;
+  }
+
+  .slide-subtitle {
+    font-size: 14px;
+  }
 }
 </style>
