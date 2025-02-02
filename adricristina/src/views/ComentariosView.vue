@@ -30,6 +30,7 @@
                 <div class="info">
                     <textarea v-model="text" placeholder="Digite seu comentário" class="add-comment"></textarea>
                     <button @click="sendComment">Enviar comentário</button>
+                    <p v-if="sucsessMsg" class="sucsess-msg">{{ sucsessMsg }}</p>
                 </div>
             </div>
         </div>
@@ -41,31 +42,13 @@ export default {
     name: 'ComentariosView',
     data() {
         return {
-            comments: [
-                {
-                    id: 1,
-                    name: "Maria Fernanda",
-                    text: "Excelente profissional, super recomendo!",
-                    date: "23 de janeiro de 2025"
-                },
-                {
-                    id: 2,
-                    name: "Maria Gabriela",
-                    text: "Ótimo atendimento!",
-                    date: "02 de janeiro de 2025"
-                },
-                {
-                    id: 3,
-                    name: "Maria Fernanda",
-                    text: "Excelente profissional, super recomendo!",
-                    date: "18 de dezembro de 2024"
-                },
-            ],
+            comments: [],
             currentPage: 1,
             itemsPerPage: 3,
             name: '',
             email: '',
             text: '',
+            sucsessMsg: '',
         };
     },
     computed: {
@@ -103,6 +86,10 @@ export default {
                 this.name = '';
                 this.email = '';    
                 this.text = '';
+                this.sucsessMsg = "Comentário enviado com sucesso!";
+                setTimeout(() => {
+                    this.sucsessMsg = "";
+                }, 3000);
             }
         }
     },
@@ -139,7 +126,7 @@ h1 {
 .comments {
     display: flex;
     flex-direction: column;
-    background-color: #f3f3f3;
+    background-color: #faf8f8;
     font-family: "Poppins", serif;
     padding: 23px;
     border-radius: 10px;
@@ -199,7 +186,7 @@ h1 {
 .pagination button:disabled {
     background: none;
     cursor: not-allowed;
-    color: #d8d7d7;
+    color: #eaeaea;
 }
 
 .pagination .page-number {
@@ -213,7 +200,8 @@ h1 {
     text-align: center;
     font-size: 20px;
     font-weight: 300;
-    color: rgb(0, 0, 0, 50%);
+    font-family: "Poppins", serif;
+    color: #faf8f8;
     padding: 20px;
 }
 
@@ -239,7 +227,7 @@ h1 {
     font-weight: 300;
     color: #292626;
     font-family: "Poppins", serif;
-    background-color: #f3f3f3;
+    background-color: #faf8f8;
 }
 
 .add-comment {
@@ -252,7 +240,7 @@ h1 {
     font-weight: 300;
     color: #292626;
     font-family: "Poppins", serif;
-    background-color: #f3f3f3;
+    background-color: #faf8f8;
     resize: none;
 }
 
@@ -272,5 +260,14 @@ h1 {
 
 .info button:hover {
     background-color: rgba(39, 157, 169, 1);
+}
+
+.sucsess-msg {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Poppins", serif;
+    color: #fff;
+    margin-top: auto;
+    text-align: center;
 }
 </style>
