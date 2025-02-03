@@ -10,15 +10,14 @@
       }
     ],
     "routes": [
-        {
-          "src": "/",
-          "dest": "home"
-   
-        },
-        {
-          "src": "/about",
-          "dest": "about"
-        }
-      ]
+      {
+        "src": "/adricristina/(.*)",
+        "dest": "/adricristina/index.html"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/adricristina/"
+      }
+    ]
   }
   
