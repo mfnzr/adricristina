@@ -9,8 +9,15 @@
         }
       }
     ],
-        "rewrites": [
-          { "source": "/(.*)", "destination": "/" }
-        ]
+    "routes": [
+      {
+        "src": "/adricristina/(.*)",
+        "dest": "/adricristina/index.html"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/adricristina/"
+      }
+    ]
   }
   
